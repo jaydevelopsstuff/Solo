@@ -1,6 +1,6 @@
 package net.jay.solo;
 
-public class Command {
+public abstract class Command {
     /** The name of this command. This is used for identification so make sure it is unique. */
     private final String name;
     /** The (optional) description of this command. */
@@ -47,6 +47,8 @@ public class Command {
         this.description = description;
         this.arguments = arguments;
     }
+
+    public abstract boolean execute(String[] args);
 
     public String getName() {
         return name;
