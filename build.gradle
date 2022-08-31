@@ -4,7 +4,7 @@ plugins {
 }
 
 group 'net.jay'
-version '1.0.0'
+version '1.0.1'
 
 repositories {
     mavenCentral()
@@ -20,7 +20,7 @@ publishing {
         mavenJava(MavenPublication) {
             groupId = 'net.jay.solo'
             artifactId = 'library'
-            version = '1.0.0'
+            version = '1.0.1'
 
             from components.java
         }
