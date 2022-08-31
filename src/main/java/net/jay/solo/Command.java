@@ -48,7 +48,7 @@ public abstract class Command {
         this.arguments = arguments;
     }
 
-    public abstract boolean execute(String[] args);
+    public abstract boolean execute(String raw, String[] args);
 
     public String getName() {
         return name;
