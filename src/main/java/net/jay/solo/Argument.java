@@ -83,7 +83,7 @@ public class Argument<T> {
      * @param required Whether this argument is required.
      * @param standardInputClass One of the following classes: Boolean, Character, String, Byte, Short, Integer, Long, Float, or Double.
      */
-    public Argument(boolean required, Class<T> standardInputClass) {
+    public Argument(Class<T> standardInputClass, boolean required) {
         this(standardInputClass);
         this.required = required;
     }
@@ -104,7 +104,7 @@ public class Argument<T> {
      * @param standardInputClass One of the following classes: Boolean, Character, String, Byte, Short, Integer, Long, Float, or Double.
      * @param initialInput The input to first parse.
      */
-    public Argument(boolean required, Class<T> standardInputClass, String initialInput) {
+    public Argument(Class<T> standardInputClass, boolean required, String initialInput) {
         this(standardInputClass);
         this.required = required;
         this.parse(initialInput);
@@ -124,7 +124,7 @@ public class Argument<T> {
      * @param required Whether this argument is required.
      * @param customParseFunction The function that will be used for parsing.
      */
-    public Argument(boolean required, Function<String, T> customParseFunction) {
+    public Argument(Function<String, T> customParseFunction, boolean required) {
         this.required = required;
         this.parseFunction = customParseFunction;
     }
@@ -146,7 +146,7 @@ public class Argument<T> {
      * @param customParseFunction The function that will be used for parsing.
      * @param initialInput The input to first parse.
      */
-    public Argument(boolean required, Function<String, T> customParseFunction, String initialInput) {
+    public Argument(Function<String, T> customParseFunction, boolean required, String initialInput) {
         this.required = required;
         this.parseFunction = customParseFunction;
         this.parse(initialInput);
